@@ -1,0 +1,27 @@
+# Build outputs
+build/
+*.o
+*.a
+*.so
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Test outputs
+*.test
+test_output/
+
+# Generated files
+*.output
+*.log
+
+# Dependencies
+/vendor/
+/deps/
+
+# System files
+.DS_Store
+Thumbs.db
