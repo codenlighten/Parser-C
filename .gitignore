@@ -1,8 +1,7 @@
-# Build outputs
+# Build directory
 build/
 *.o
-*.a
-*.so
+*.out
 
 # IDE and editor files
 .vscode/
@@ -10,18 +9,28 @@ build/
 *.swp
 *~
 
-# Test outputs
-*.test
-test_output/
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
 
-# Generated files
-*.output
-*.log
+# Test outputs
+test_*.out
 
 # Dependencies
-/vendor/
-/deps/
+*.d
 
-# System files
+# Executables
+*.exe
+*.app
+leancc
+
+# OS-specific files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
