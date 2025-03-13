@@ -1,7 +1,6 @@
 #ifndef LEANCC_H
 #define LEANCC_H
 
-#include <stdint.h>
 #include <stdbool.h>
 
 // Compiler version
@@ -32,7 +31,8 @@ typedef struct {
 } Error;
 
 // Main compiler interface
-bool compile_file(const char* input_file, const char* output_file, Error* error);
+int compile_file(const char* input_file, const char* output_file);
+
 const char* get_version_string(void);
 
 #endif // LEANCC_H

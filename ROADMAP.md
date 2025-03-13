@@ -1,62 +1,76 @@
-# LLVM Replacement Project Roadmap
+# LeanCC Compiler Project Roadmap
 
-## Project Goals
-- Create lightweight C compiler
-- Target x86-64 architecture
-- Binary size < 1MB
-- Faster compilation than Clang
-- Timeline: 30 weeks
+## Phase 1: Project Setup and Planning 
+- Basic project structure and build system 
+- Initial documentation 
+- Development environment setup 
 
-## Phase 1: Planning & Setup (Weeks 1-2)
-- [ ] Project kickoff meeting
-- [ ] Define architecture and IR design
-- [ ] Set up repository and build system
-- [ ] Establish coding standards
-- [ ] Create initial test framework
+## Phase 2: Frontend Development (Current Phase)
+### Lexer and Parser
+- Basic lexical analysis 
+- Token types and management 
+- Abstract Syntax Tree (AST) design 
+- Core C syntax support:
+  - Binary operators (+, -, *, /) with precedence 
+  - Variable declarations and assignments 
+  - Control flow statements (if/else, while) 
+  - Function calls and definitions 
+  - Symbol table with scope management 
+  - Error handling with descriptive messages 
 
-## Phase 2: Frontend (Weeks 3-6)
-- [ ] Implement recursive descent parser
-  - [ ] Basic types (int, char)
-  - [ ] Functions
-  - [ ] If/while statements
-- [ ] Build AST generator
-- [ ] Create parser test suite
-- [ ] Milestone: Parse basic C program
+### Next Immediate Tasks
+1. Parser Testing and Validation
+   - Create comprehensive test suite for all implemented features
+   - Test edge cases and error conditions
+   - Validate AST structure for complex programs
+   - Add test coverage metrics
 
-## Phase 3: IR & Codegen (Weeks 7-12)
-- [ ] Design IR format
-- [ ] Implement AST to IR conversion
-- [ ] Create x86-64 code generator
-- [ ] Set up assembler integration
-- [ ] Milestone: Generate working binary
+2. Parser Optimization
+   - Implement error recovery mechanisms
+   - Optimize memory usage in AST construction
+   - Profile and improve parsing performance
+   - Clean up remaining compiler warnings
 
-## Phase 4: Core Functionality (Weeks 13-20)
-- [ ] Add variable support
-- [ ] Implement control flow
-- [ ] Add function calls
-- [ ] Create stack frame handling
-- [ ] Milestone: Compile 50-line program
+3. IR Design and Planning
+   - Document IR requirements and constraints
+   - Design IR instruction set
+   - Plan IR optimization passes
+   - Create IR builder interface
 
-## Phase 5: Optimization (Weeks 21-26)
-- [ ] Implement constant folding
-- [ ] Add dead code elimination
-- [ ] Create basic register allocation
-- [ ] Optimize compiler performance
-- [ ] Milestone: Compile 100-line program
+## Phase 3: IR Generation (Next Phase)
+- IR instruction set implementation
+- AST to IR translation
+- Basic IR optimizations
+- IR validation and testing
 
-## Phase 6: Release (Weeks 27-30)
-- [ ] Complete documentation
-- [ ] Create usage guide
-- [ ] Package v0.1 release
-- [ ] Plan v0.2 features
+## Phase 4: Backend Development
+- Target architecture selection
+- Code generation framework
+- Register allocation
+- Basic optimizations
+- Assembly output
 
-## Current Status
-📅 Start Date: March 12, 2025
-🎯 Target Release: October 2025
+## Phase 5: Optimization and Enhancement
+- Advanced optimizations
+- Debug information
+- Error recovery
+- Performance improvements
 
-## Team
-- Lead Architect: TBD
-- Frontend Developer(s): TBD
-- Backend Developer(s): TBD
-- Optimizer: TBD
-- QA/Testing: TBD
+## Phase 6: Testing and Documentation
+- Comprehensive test suite
+- Documentation updates
+- Performance benchmarks
+- Example programs
+
+## Target Release: October 2025
+
+## Current Status (as of March 13, 2025)
+- Phase 2 (Frontend Development) in progress
+- Major parser features completed
+- Moving to testing and optimization phase
+- IR design planning to begin soon
+
+## Next Milestone
+- Complete parser testing and validation
+- Begin IR design and implementation
+- Target: April 2025
